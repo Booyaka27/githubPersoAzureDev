@@ -14,7 +14,7 @@ resource "azurerm_resource_group" "testSL-TF001" {
 # Compte de stockage
 # Storage Account
 resource "azurerm_storage_account" "testSL-TF001-StorAccount" {
-  name                = "storageaccountpackertestsl001"
+  name                = "packerstortestsl001"
   resource_group_name = "${azurerm_resource_group.testSL-TF001.name}"
   location            = "${azurerm_resource_group.testSL-TF001.location}"
   account_type        = "Standard_LRS"
@@ -22,7 +22,7 @@ resource "azurerm_storage_account" "testSL-TF001-StorAccount" {
 
 # Container dans le compte de stockage
 resource "azurerm_storage_container" "testSL-TF001-Container" {
-   name = "VM-images"
+   name = "vm-images"
    resource_group_name = "${azurerm_resource_group.testSL-TF001.name}"
    storage_account_name = "${azurerm_storage_account.testSL-TF001-StorAccount.name}"
    container_access_type = "private"
