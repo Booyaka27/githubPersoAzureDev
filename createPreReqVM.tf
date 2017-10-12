@@ -115,7 +115,7 @@ resource "azurerm_public_ip" "TF-PublicIp-VM01" {
   location                     = "${var.AzureRegion}"
   resource_group_name          = "${azurerm_resource_group.testSL-TF001.name}"
   public_ip_address_allocation = "static"
-  domain_name_label            = "publicVM01"
+  domain_name_label            = "publicvm01"
 }
 
 # Network Card Interface definition for VM01
